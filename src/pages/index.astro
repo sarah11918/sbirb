@@ -1,22 +1,51 @@
 ---
-import Main from "../cra/Main.jsx";
-import '../styles/global.css';
+import '../styles/bird.css'
+import '../styles/global.css'
+import App from '../bird/App.jsx';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>sBirb</title>
-	</head>
-	<body>
-		<main>
-			<h1>sBirb</h1>
-			<p><a href="/sbirb/">Take me to sBirb</a></p>
-			<!-- <p><a href="/sbirb/">sBirb</a></p> -->
-			<!-- <Main client:only="react"/>  -->
-		</main>
-	</body>
-</html>
+  <style global>
+  
+  .regions {
+    background: #eef9ed;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-left: 0.5em;
+  }
+  .panel__inner {
+    background: lightgreen;
+    overflow-x: hidden;
+    overflow-y: scroll; 
+    height: 60vh;
+  }
+
+  .panel__inner::-webkit-scrollbar {
+    width: 8px;
+}
+ .panel__inner::-webkit-scrollbar-thumb {
+    background: #909090;
+    border-radius: 8px;
+}
+panel__inner::-webkit-scrollbar-track {
+    background: #FFFFFF;
+}
+   button {
+        height: 3em;
+    }
+
+    input {
+        height: 3em;
+    }
+    button.accordion__header {
+      height: auto;
+  }
+
+  </style>
+  
+<Layout title="sBirb">
+  <main>
+    <App client:load />
+  </main>
+</Layout>
+
