@@ -5,7 +5,19 @@ interface Props {
 	title: string;
 }
 
-const { title = "sBirb"} = Astro.props;
+
+const { title } = Astro.props;
+const site={
+    title: "🐦 sBirb 🐦",
+    description: "Birding tools by @sarah11918",
+    image: {
+        src: "https://lh3.googleusercontent.com/pw/AM-JKLUwoJunFVUl0-53MQ2wr8-kKjtUCgbZ2AS5hJg7pLtMM-vz8bL9jrDEKxx68OKZT8Rndip28WehHVZwX63UrsE13B5O7o2wys7TswfzAXp2YZAkBJVu1hyk2thtIDPg1YW0-FEZi8h5vzV5uLY1WNunhw=w896-h672-no?.jpg",
+        alt: "A chickadee on a branch.",
+    }
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+console.log(canonicalURL)
 ---
 
 <!doctype html>
@@ -16,6 +28,17 @@ const { title = "sBirb"} = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+    <meta name="description" content={title}>
+		<meta property="og:url" content = {canonicalURL}>
+		<meta property="og:type" content = "website">
+		<meta property="og:title" content = {title}/>
+		<meta property="og:image" content = {site.image.src} />
+		<meta property="og:image:alt" content = {site.image.alt} />
+		<meta property="og:description" content = {site.description}>
+		<meta property="og:site_name" content={site.title}>
+		<meta property="og:locale" content="en_CA">
+		<meta property="article:author" content="Sarah Rainsberger">
+		<link rel="canonical" href={canonicalURL} />
 		<title>{title}</title>
 	</head>
 	<body>
