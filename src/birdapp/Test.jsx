@@ -1,10 +1,10 @@
 import React from 'react';
 import {useState, useContext} from 'react';
-import LocationContext from './LocationContext.jsx';
-import Regions from './Regions.jsx';
-import Notable from './Notable.jsx';
-import Recent from './Recent.jsx';
-import RegionDate from './RegionDate.jsx'
+import LocationContext from '../bird/LocationContext.jsx';
+import Regions from '../bird/Regions.jsx';
+import Notable from '../bird/Notable.jsx';
+import Recent from '../bird/Recent.jsx';
+import RegionDate from '../bird/RegionDate.jsx'
 
 const Test = () => {
   //This is the global state- captures the default location -Canada Prince-Edward Island-Prince County

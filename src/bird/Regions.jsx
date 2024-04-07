@@ -90,7 +90,7 @@ export default function Regions() {
         {location && <>
         
         <h3  id="regions-return" style={{marginTop: "0.1em", marginBottom: "0.1em", paddingLeft: "0.1em"}}>Regions in {location}</h3>
-        <p style={{marginTop: "0", paddingLeft: "0.1em"}}>Click to set a default region (Currently: {context.defaultLocation})</p></>}
+       </>}
         
         <ul style={{display: "flex", flexWrap:"wrap", listStyleType: "none", paddingLeft: "0.1em", marginTop: "0", paddingBottom: "0"}}>{regionDivs}</ul>
         </div>
@@ -125,7 +125,7 @@ export default function Regions() {
       return (
         <div className="regions">
           <h3 style={{marginTop: "0.1em", marginBottom: "0.1em", paddingLeft: "0.1em"}}>Available sub-regions</h3>
-          <p style={{marginTop: "0", paddingLeft: "0.1em"}}>Click to set a default region (Currently: {context.defaultLocation})</p>
+          <p style={{marginTop: "0", paddingLeft: "0.1em"}}>Region Code: {context.defaultLocation}</p>
           <div className="sub-regions">
           <ul style={{listStyleType: "none", paddingLeft: "0.1em"}}>{subRegionDivs}</ul>
           </div>

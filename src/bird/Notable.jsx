@@ -24,6 +24,12 @@ export default function Notable() {
     getLocationSightings("CA-PE");
   }
 
+  function changeLocationToMontreal() {
+    setNotableBirds([]);
+    setLocation("CA-QC-MR");
+    getLocationSightings("CA-QC-MR");
+  }
+
   function changeLocationToStockholm() {
     setNotableBirds([]);
     setLocation("SE-AB");
@@ -40,6 +46,12 @@ export default function Notable() {
     setNotableBirds([]);
     setLocation("DE-BY");
     getLocationSightings("DE-BY");
+  }
+
+  function changeLocationToBerlin() {
+    setNotableBirds([]);
+    setLocation("DE-BE");
+    getLocationSightings("DE-BE");
   }
 
   function changeLocationToVienna() {
@@ -72,6 +84,12 @@ export default function Notable() {
     getLocationSightings("LT-VL");
   }
 
+  function changeLocationToTallinn() {
+    setNotableBirds([]);
+    setLocation("EE-37");
+    getLocationSightings("EE-37");
+  }
+
   async function getLocationSightings(myLocation) {
     setNotableBirds([]);
     const myHeaders = new Headers();
@@ -100,16 +118,20 @@ export default function Notable() {
   return (
     <div style={{ backgroundColor: "#eef9ed", padding:"0.5em", border: "1px solid green", borderRadius: "2px"}}>
       <h3>See recent reports of Rare or Unusual birds!</h3>
-      <h5 className="birdtab">Showing birds reported in: {location}/ (Default Location: {context.defaultLocation})</h5>
-      <div stlye={{ display: "flex" }}>
-        <p>Quick select:</p>
-        <button
+      <p>The birds below were observed in unusual locations or at unexpected times of the year.</p>
+      <p>Unusual observations are "pending" until eBird manually reviews and confirms them.</p>
+      <p>Birders are not notified when their observations are confirmed, <a href="/about/">which is why I built this site!</a></p>
+     
+      <button
         style = {{backgroundColor: "yellow"}}
           className="location-change quickLocation"
           onClick={changeLocationToDefaultLocation}
         >
-          <span style={{fontWeight: "bold"}}>Use my Default Location</span>
+          <span style={{fontWeight: "bold"}}>Use my Default Location {context.defaultLocation}</span>
         </button>
+      <div stlye={{ display: "flex" }}>
+        <p>Quick select:</p>
+        
         <button
           className="location-change quickLocation"
           onClick={changeLocationToToronto}
@@ -121,6 +143,12 @@ export default function Notable() {
           onClick={changeLocationToPEI}
         >
           PEI
+        </button>
+        <button
+          className="location-change quickLocation"
+          onClick={changeLocationToMontreal}
+        >
+          Montreal
         </button>
         <button
           className="location-change quickLocation"
@@ -148,6 +176,12 @@ export default function Notable() {
         </button>
         <button
           className="location-change quickLocation"
+          onClick={changeLocationToBerlin}
+        >
+          Berlin
+        </button>
+        <button
+          className="location-change quickLocation"
           onClick={changeLocationToPrague}
         >
           Prague
@@ -170,6 +204,12 @@ export default function Notable() {
         >
           Vilnius
         </button>
+        <button
+          className="location-change quickLocation"
+          onClick={changeLocationToTallinn}
+        >
+          Tallinn
+        </button>
       </div>
       <p>... or enter manually</p>
       <form onSubmit={changeLocation}>
@@ -181,6 +221,7 @@ export default function Notable() {
         />
         <button>Submit Location</button>
       </form>
+      <h5 className="birdtab">Showing birds reported in: {location}</h5>
       <div className="image-container">
       <img src="https://lh3.googleusercontent.com/pw/AM-JKLXBCCGGYuLTL_j0cc_iOTzfwB6DGwY3unGiZy39RXWI-rn1kHMAYAPfzE2IoQaD-2yhzLrYyPCb8tbS_i9lsSjfheOJMU8Wj5Ev6RjVt3IZLol1tzNHaSLObFx2vOUW6zDAMhTXPyroEtASiAUynEr6UA=w566-h92-no?.jpg" />
       </div>

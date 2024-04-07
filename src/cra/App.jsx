@@ -1,8 +1,13 @@
 import { Routes, Route, Outlet, Link } from "react-router-dom";
-import Test from '../bird/Test';
+import Test from '../birdapp/Test';
+import Recently from '../birdapp/Recently';
+import Unusual from '../birdapp/Unusual';
+import RegionID from '../birdapp/RegionID';
 
 export default function App() {
+  
   return (
+   
     <div>
       <h1>sBirb</h1>
 
@@ -16,8 +21,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="recent" element={<Recently />} />
+          <Route path="unusual" element={<Unusual />} />
+          <Route path="region" element={<RegionID />} />
           <Route path="test" element={<Test />} />
 
           {/* Using path="*"" means "match anything", so this route
@@ -27,6 +33,7 @@ export default function App() {
         </Route>
       </Routes>
     </div>
+
   );
 }
 
@@ -41,10 +48,13 @@ function Layout() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/recent">Recently Seen</Link>
           </li>
           <li>
-            <Link to="/dashboard">Dashboard</Link>
+            <Link to="/unusual">Rare or Unusual</Link>
+          </li>
+          <li>
+            <Link to="/region">Find a location's eBird Region ID code</Link>
           </li>
           <li>
             <Link to="/test">Test</Link>
@@ -90,13 +100,6 @@ function Dashboard() {
 }
 
 
-// function Test() {
-//   return (
-//     <div>
-//       <h2>Test</h2>
-//     </div>
-//   );
-// }
 function NoMatch() {
   return (
     <div>

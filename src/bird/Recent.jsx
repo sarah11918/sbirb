@@ -54,7 +54,8 @@ export default function Recent() {
   return (
       <div style={{ backgroundColor: "#eef9ed", padding:"0.5em", border: "1px solid green", borderRadius: "2px"}}>
       <h3>When was each bird species last seen in your area?</h3>
-      <h5 className="birdtab">Showing birds reported in: {location} / (Default Location: {context.defaultLocation})</h5>
+      <p>I use this as a "gut check" when I think I've seen a certain bird that seems unusual for this time of year. If someone else has recently reported seeing that bird, then you know someone else saw it, too!</p>
+      
       
       <div style={{textAlign:"center"}}>
         <button
@@ -62,18 +63,19 @@ export default function Recent() {
             className="location-change quickLocation"
             onClick={changeLocationToDefaultLocation}
           >
-            <span style={{fontWeight: "bold"}}>Use my Default Location</span>
+            <span style={{fontWeight: "bold"}}>Use my Default Location: {context.defaultLocation}</span>
           </button>
-        <p>or set manually</p>
+        <p>or enter a different eBird region ID code</p>
         <form onSubmit={getBirdSightings}>
           <input
             name="location"
             type="text"
-            placeholder="eBird region ID eg. CA-PE"
+            placeholder="eBird region ID"
             style={{ textTransform: "uppercase" }}
           />
           <button> See the birds!</button>
         </form>
+        <h5 className="birdtab">Showing birds reported in: {location} </h5>
         </div>
      
       <h3>Reported in the last 30 days...</h3>

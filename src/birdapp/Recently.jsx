@@ -1,12 +1,12 @@
 import React from 'react';
 import {useState, useContext} from 'react';
-import LocationContext from './LocationContext.jsx';
-import Regions from './Regions.jsx';
-import Notable from './Notable.jsx';
-import Recent from './Recent.jsx';
-import RegionDate from './RegionDate.jsx'
+import LocationContext from '../bird/LocationContext.jsx';
+import Regions from '../bird/Regions.jsx';
+import Notable from '../bird/Notable.jsx';
+import Recent from '../bird/Recent.jsx';
+import RegionDate from '../bird/RegionDate.jsx'
 
-const Test = () => {
+const Recently = () => {
   //This is the global state- captures the default location -Canada Prince-Edward Island-Prince County
   const [defaultLocation, setDefaultLocation] = useState("CA-PE-PR");
 
@@ -17,8 +17,6 @@ const Test = () => {
 
   return(
     <div>
-    <h3>Welcome to my bird app!</h3>
-    
     <LocationContext.Provider value={{ defaultLocation: defaultLocation, setDefaultLocation: setDefaultLocation}}>
     <Recent defaultLocation={defaultLocation}/>
     <div>
@@ -60,14 +58,10 @@ const Test = () => {
     </div>
     </details>
     </div>
-    <Notable defaultLocation={defaultLocation}/>
-    <h2>Other Tools</h2>
-    
-      <RegionDate defaultLocation={defaultLocation}/>
     </LocationContext.Provider>
 
   </div>
   )
 };
 
-export default Test
+export default Recently
