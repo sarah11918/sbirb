@@ -33,7 +33,7 @@ const App = () => {
     <h1>Welcome to my bird app!</h1>
     <p>These are some tools I built using the eBird API to enrich my birding experience.</p>
 
-    <button style={{backgroundColor: '#eef9ed'}} onClick={onClick2unusual}>See rare or unusual bird observations</button> <button style={{backgroundColor: '#eef9ed'}} onClick={onClick2recent}>See all birds recently observed</button> <button style={{backgroundColor: '#eef9ed'}} onClick={onClick2region}>Find eBird Region codes</button>
+    <button style={{backgroundColor: '#eef9ed'}} onClick={onClick2unusual}>See rare or unusual bird observations</button> <button style={{backgroundColor: '#eef9ed'}} onClick={onClick2recent}>See all birds recently observed in an area</button> <button style={{backgroundColor: '#eef9ed'}} onClick={onClick2region}>Find eBird Region codes</button>
 
     <div style={{fontSize: "0.75em", fontStyle: "italic", paddingBottom: "0.25em"}}>
     <p>Enter a new default location code</p>
