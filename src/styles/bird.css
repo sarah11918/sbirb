@@ -119,3 +119,37 @@ background: #FFFFFF;
 .all-details{
 padding-bottom: 1em;
 }
+
+.regions {
+  background: #eef9ed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-left: 0.5em;
+}
+.panel__inner {
+  background: lightgreen;
+  overflow-x: hidden;
+  overflow-y: scroll; 
+  height: 60vh;
+}
+
+.panel__inner::-webkit-scrollbar {
+  width: 8px;
+}
+.panel__inner::-webkit-scrollbar-thumb {
+  background: #909090;
+  border-radius: 8px;
+}
+panel__inner::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+ button {
+      height: 3em;
+  }
+
+  input {
+      height: 3em;
+  }
+  button.accordion__header {
+    height: auto;
+}
