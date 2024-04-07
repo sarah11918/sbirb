@@ -55,7 +55,6 @@ const App = () => {
     <Recent defaultLocation={defaultLocation}/>
 
     <h2 id="region"><a href="#region">🐦</a> Find an eBird region ID code</h2>
- 
     <Regions />
  
     <details>
