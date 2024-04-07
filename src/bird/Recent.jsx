@@ -75,7 +75,7 @@ export default function Recent() {
           />
           <button> See the birds!</button>
         </form>
-        <h5 className="birdtab">Showing birds reported in: {location} </h5>
+        <h4 className="birdtab">Showing birds reported in: {location} </h4>
         </div>
      
       <h3>Reported in the last 30 days...</h3>

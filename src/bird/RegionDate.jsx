@@ -132,7 +132,7 @@ export default function RegionDate() {
     </select>?</h3>
 
 
-      <h5 className="birdtab">Showing summary for: {location} / (Default Location: {context.defaultLocation})</h5>
+      <h4 className="birdtab">Showing summary for: {location} / (Default Location: {context.defaultLocation})</h4>
       <p>⚠️ a current bug in the API shows 0 results for location codes with sub-regions! (eg CA-ON<b><em>-TO</em></b>) ⚠️</p>
     
       

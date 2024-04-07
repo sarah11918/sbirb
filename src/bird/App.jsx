@@ -48,13 +48,13 @@ const App = () => {
 
   
  
-    <h2 id="unusual"><a href="#unusual" aria-hidden="true">🐦</a> Rare or Notable Birds</h2>
+    <h2 id="unusual"><a href="#unusual">🐦</a> Rare or Notable Birds</h2>
     <Notable defaultLocation={defaultLocation}/>
 
-    <h2 id="recent"><a href="#recent" aria-hidden="true">🐦</a> Recent Birds</h2>
+    <h2 id="recent"><a href="#recent">🐦</a> Recent Birds</h2>
     <Recent defaultLocation={defaultLocation}/>
 
-    <h2 id="region"><a href="#region" aria-hidden="true">🐦</a> Find an eBird region ID code</h2>
+    <h2 id="region"><a href="#region">🐦</a> Find an eBird region ID code</h2>
  
     <Regions />
  
