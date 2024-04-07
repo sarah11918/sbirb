@@ -5,7 +5,6 @@ interface Props {
 	title: string;
 }
 
-
 const { title } = Astro.props;
 const site={
     title: "🐦 sBirb 🐦",
@@ -17,7 +16,6 @@ const site={
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-console.log(canonicalURL)
 ---
 
 <!doctype html>
