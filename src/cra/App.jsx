@@ -3,14 +3,10 @@ import { Routes, Route, Outlet, Link } from "react-router-dom";
 export default function App() {
   return (
     <div>
-      <h1>Basic Example</h1>
+      <h1>sBirb</h1>
 
       <p>
-        This example demonstrates some of the core features of React Router
-        including nested <code>&lt;Route&gt;</code>s,{" "}
-        <code>&lt;Outlet&gt;</code>s, <code>&lt;Link&gt;</code>s, and using a
-        "*" route (aka "splat route") to render a "not found" page when someone
-        visits an unrecognized URL.
+        This is a simple web app I built using the eBird API to check the status of rare/unusual bird sightings. Over time, I added more data searches that helped me when I was observing birds.
       </p>
 
       {/* Routes nest inside one another. Nested route paths build upon
