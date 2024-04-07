@@ -31,7 +31,7 @@ const App = () => {
     <div>
     <LocationContext.Provider value={{ defaultLocation: defaultLocation, setDefaultLocation: setDefaultLocation}}>
     <h1>Welcome to my bird app!</h1>
-    <p>These are some tools I built using the eBird API to enrich my birding experience.</p>
+    <p>These are some tools I built using the <a href="https://documenter.getpostman.com/view/664302/S1ENwy59?version=latest">eBird API</a> to enrich my own birding experience.</p>
 
     <button style={{backgroundColor: '#eef9ed'}} onClick={onClick2unusual}>See rare or unusual bird observations</button> <button style={{backgroundColor: '#eef9ed'}} onClick={onClick2recent}>See all birds recently observed in an area</button> <button style={{backgroundColor: '#eef9ed'}} onClick={onClick2region}>Find eBird Region codes</button>
 
