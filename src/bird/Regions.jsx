@@ -110,7 +110,7 @@ export default function Regions() {
         <li key={region.code} className="regionItem">
           <span style={{fontSize: "0.75em"}}>
             <button
-              class="region-button"
+              class="sub-region-button"
               id={region.code}
               onClick={() => {
                 context.setDefaultLocation(region.code);
@@ -125,7 +125,8 @@ export default function Regions() {
       return (
         <div className="regions">
           <h3 style={{marginTop: "0.1em", marginBottom: "0.1em", paddingLeft: "0.1em"}}>Available sub-regions</h3>
-          <p style={{marginTop: "0", paddingLeft: "0.1em"}}>Region Code: {context.defaultLocation}</p>
+          <p>Click to set as default location</p>
+          <p style={{marginTop: "0", paddingLeft: "0.1em"}}>Default Region code selected: {context.defaultLocation}</p>
           <div className="sub-regions">
           <ul style={{listStyleType: "none", paddingLeft: "0.1em"}}>{subRegionDivs}</ul>
           </div>
