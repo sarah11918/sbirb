@@ -125,8 +125,8 @@ export default function Regions() {
       return (
         <div className="regions">
           <h3 style={{marginTop: "0.1em", marginBottom: "0.1em", paddingLeft: "0.1em"}}>Available sub-regions</h3>
-          <p>Click to set as default location</p>
           <p style={{marginTop: "0", paddingLeft: "0.1em"}}>Default Region code selected: {context.defaultLocation}</p>
+          <p>Click to set a sub-region as your default location</p>
           <div className="sub-regions">
           <ul style={{listStyleType: "none", paddingLeft: "0.1em"}}>{subRegionDivs}</ul>
           </div>
