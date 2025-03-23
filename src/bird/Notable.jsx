@@ -118,7 +118,7 @@ export default function Notable() {
   return (
     <div style={{ backgroundColor: "#eef9ed", padding:"0.5em", border: "1px solid green", borderRadius: "2px"}}>
       <h3>See recent reports of Rare or Unusual birds!</h3>
-      <p>The birds below were observed in unusual locations or at unexpected times of the year.</p>
+      <p>The birds below were observed in <span className="bold">unusual locations</span> or at <span className="bold">unexpected times</span> of the year.</p>
       <p>Unusual observations are "pending" until eBird manually reviews and confirms them.</p>
       <p>Birders are not notified when their observations are confirmed, <a href="/about/">which is why I built this site!</a></p>
      
@@ -127,10 +127,10 @@ export default function Notable() {
           className="location-change quickLocation"
           onClick={changeLocationToDefaultLocation}
         >
-          <span style={{fontWeight: "bold"}}>Use my Default Location {context.defaultLocation}</span>
+          <span style={{fontWeight: "bold"}}>See observations in your default location: {context.defaultLocation}</span>
         </button>
       <div stlye={{ display: "flex" }}>
-        <p>Quick select:</p>
+        <p>... or select a city to display observations:</p>
         
         <button
           className="location-change quickLocation"
@@ -211,7 +211,7 @@ export default function Notable() {
           Tallinn
         </button>
       </div>
-      <p>... or enter manually</p>
+      <p>... or enter an eBird region manually:</p>
       <form onSubmit={changeLocation}>
         <input
           name="location"

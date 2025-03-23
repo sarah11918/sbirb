@@ -79,6 +79,10 @@ a.experiment:hover {
   padding: 0.5em;
 }
 
+button {
+  cursor: pointer;
+
+}
 
 code:not([class*="language"]){
   word-break: break-word;

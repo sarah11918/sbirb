@@ -153,3 +153,12 @@ panel__inner::-webkit-scrollbar-track {
   button.accordion__header {
     height: auto;
 }
+
+.tools {
+  list-style: none;
+  padding-bottom: 1em;
+}
+
+.bold {
+  font-weight: 800;
+}

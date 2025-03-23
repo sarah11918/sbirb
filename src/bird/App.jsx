@@ -32,24 +32,35 @@ const App = () => {
     <LocationContext.Provider value={{ defaultLocation: defaultLocation, setDefaultLocation: setDefaultLocation}}>
     <h1>Welcome to my bird app!</h1>
     <p>These are some tools I built using the <a href="https://documenter.getpostman.com/view/664302/S1ENwy59?version=latest">eBird API</a> to enrich my own birding experience.</p>
-
+    <p>Enter any valid eBird region code to see reports from anywhere in the world.</p>
+  
+    
+    
+{/* 
     <button style={{backgroundColor: '#eef9ed'}} onClick={onClick2unusual}>See rare or unusual bird observations</button> <button style={{backgroundColor: '#eef9ed'}} onClick={onClick2recent}>See all birds recently observed in an area</button> <button style={{backgroundColor: '#eef9ed'}} onClick={onClick2region}>Find eBird Region codes</button>
+*/}
+
 
     <div style={{fontSize: "0.75em", fontStyle: "italic", paddingBottom: "0.25em"}}>
-    <p>Enter a new default location code</p>
+    
     <form style={{paddingBottom:"2em"}} onSubmit={changeDefaultLocation}>
         <input
           name="defaultLocation"
           type="text"
           placeholder="eBird region eg. CA-PE-PR"
         />
-        <button>Set a default Location (currently: {defaultLocation})</button>
+        <button>Update my region! (currently: {defaultLocation})</button>
+        <p>Enter a new default location code. <a href="#unusual">Find your own eBird Region code</a> to use these tools for your area!</p>
       </form>
     </div>
 
-  
+    <h2>Birding Tools</h2>
+      <ul className="tools">
+        <li className="tools">🤨🦚🐧 <a href="#unusual">See rare or unusual bird observations</a></li>
+        <li className="tools">🐦🐦‍⬛🦆🪿<a href="#unusual">See all birds recently observed in an area</a></li>
+      </ul>
  
-    <h2 id="unusual"><a href="#unusual">🐦</a> Rare or Notable Birds</h2>
+    <h2 id="unusual"><a href="#unusual">🦤</a> Rare or Notable Birds</h2>
     <Notable defaultLocation={defaultLocation}/>
 
     <h2 id="recent"><a href="#recent">🐦</a> Recent Birds</h2>
