@@ -211,7 +211,7 @@ export default function Notable() {
           Tallinn
         </button>
       </div>
-      <p>... or enter an eBird region manually:</p>
+      <p>... or enter an <a href="#region">eBird region ID</a> manually:</p>
       <form onSubmit={changeLocation}>
         <input
           name="location"

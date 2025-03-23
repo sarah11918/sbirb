@@ -15,31 +15,12 @@ const App = () => {
     setDefaultLocation(event.target.elements.defaultLocation.value.toUpperCase());
   }
 
-  const onClick2recent = () => {
-    window.location.href = "#recent";
-  };
-
-  const onClick2unusual = () => {
-    window.location.href = "#unusual";
-  };
-
-  const onClick2region = () => {
-    window.location.href = "#region";
-  };
-
   return(
     <div>
     <LocationContext.Provider value={{ defaultLocation: defaultLocation, setDefaultLocation: setDefaultLocation}}>
     <h1>Welcome to my bird app!</h1>
     <p>These are some tools I built using the <a href="https://documenter.getpostman.com/view/664302/S1ENwy59?version=latest">eBird API</a> to enrich my own birding experience.</p>
     <p>Enter any valid eBird region code to set a default location for observations.</p>
-  
-    
-    
-{/* 
-    <button style={{backgroundColor: '#eef9ed'}} onClick={onClick2unusual}>See rare or unusual bird observations</button> <button style={{backgroundColor: '#eef9ed'}} onClick={onClick2recent}>See all birds recently observed in an area</button> <button style={{backgroundColor: '#eef9ed'}} onClick={onClick2region}>Find eBird Region codes</button>
-*/}
-
 
     <div style={{fontSize: "0.75em", paddingBottom: "0.25em"}}>
     
@@ -49,7 +30,7 @@ const App = () => {
           type="text"
           placeholder="eBird region eg. CA-PE-PR"
         />
-        <button>Update my default region! (currently: {defaultLocation})</button>
+        <button>Update my default region! ({defaultLocation})</button>
         <p>🔎 <a href="#region">Find your own eBird Region code</a> 🔍 to use these tools for your area!</p>
       </form>
     </div>

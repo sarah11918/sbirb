@@ -66,7 +66,7 @@ export default function Recent() {
           >
             <span style={{fontWeight: "bold"}}>Use my Default Location: {context.defaultLocation}</span>
           </button>
-        <p>or enter a different eBird region ID code</p>
+        <p>or enter a different <a href="#region">eBird region ID</a></p>
         <form onSubmit={getBirdSightings}>
           <input
             name="location"
