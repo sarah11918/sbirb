@@ -158,7 +158,3 @@ panel__inner::-webkit-scrollbar-track {
   list-style: none;
   padding-bottom: 1em;
 }
-
-.bold {
-  font-weight: 800;
-}

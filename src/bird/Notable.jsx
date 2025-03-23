@@ -118,7 +118,7 @@ export default function Notable() {
   return (
     <div style={{ backgroundColor: "#eef9ed", padding:"0.5em", border: "1px solid green", borderRadius: "2px"}}>
       <h3>See recent reports of Rare or Unusual birds!</h3>
-      <p>The birds below were observed in <span className="bold">unusual locations</span> or at <span className="bold">unexpected times</span> of the year.</p>
+      <p>The birds below were observed in <span style={{fontWeight: "800"}}>unusual locations</span> or at <span style={{fontWeight: "800"}}>unexpected times</span> of the year.</p>
       <p>Unusual observations are "pending" until eBird manually reviews and confirms them.</p>
       <p>Birders are not notified when their observations are confirmed, <a href="/about/">which is why I built this site!</a></p>
      

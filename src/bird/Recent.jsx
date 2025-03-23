@@ -33,7 +33,7 @@ export default function Recent() {
   async function changeLocationToDefaultLocation() {
     setLocation(context.defaultLocation);
     const queryLocation = context.defaultLocation
-    const recentUrl = `https://api.ebird.org/v2/data/obs/${queryLocation}/recent?back=30`
+    const recentUrl = `https://api.ebird.org/v2/data/obs/${queryLocation}/recent?back=14`
     const myHeaders = new Headers();
     myHeaders.append("X-eBirdApiToken", `2ifbkhv7g8ct`);
 
@@ -54,7 +54,8 @@ export default function Recent() {
   return (
       <div style={{ backgroundColor: "#eef9ed", padding:"0.5em", border: "1px solid green", borderRadius: "2px"}}>
       <h3>When was each bird species last seen in your area?</h3>
-      <p>I use this as a "gut check" when I think I've seen a certain bird that seems unusual for this time of year. If someone else has recently reported seeing that bird, then you know someone else saw it, too!</p>
+      <p>I use this as a "gut check" when I <span style={{fontStyle: "italic"}}>think</span> I've seen a certain bird but would feel more comfortable knowing that someone else saw it recently, too!</p>
+      <p>Birds are listed by how recently they were last reported.</p>
       
       
       <div style={{textAlign:"center"}}>
@@ -78,7 +79,7 @@ export default function Recent() {
         <h4 className="birdtab">Showing birds reported in: {location} </h4>
         </div>
      
-      <h3>Reported in the last 30 days...</h3>
+      <h3>Reported in the last 14 days...</h3>
       {recentBirds.map((bird) => (
         <p>{bird.comName} on {bird.obsDt.toString().slice(5,10)}</p>
       ))}

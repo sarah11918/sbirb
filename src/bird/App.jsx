@@ -32,7 +32,7 @@ const App = () => {
     <LocationContext.Provider value={{ defaultLocation: defaultLocation, setDefaultLocation: setDefaultLocation}}>
     <h1>Welcome to my bird app!</h1>
     <p>These are some tools I built using the <a href="https://documenter.getpostman.com/view/664302/S1ENwy59?version=latest">eBird API</a> to enrich my own birding experience.</p>
-    <p>Enter any valid eBird region code to see reports from anywhere in the world.</p>
+    <p>Enter any valid eBird region code to set a default location for observations.</p>
   
     
     
@@ -41,7 +41,7 @@ const App = () => {
 */}
 
 
-    <div style={{fontSize: "0.75em", fontStyle: "italic", paddingBottom: "0.25em"}}>
+    <div style={{fontSize: "0.75em", paddingBottom: "0.25em"}}>
     
     <form style={{paddingBottom:"2em"}} onSubmit={changeDefaultLocation}>
         <input
@@ -49,15 +49,15 @@ const App = () => {
           type="text"
           placeholder="eBird region eg. CA-PE-PR"
         />
-        <button>Update my region! (currently: {defaultLocation})</button>
-        <p>Enter a new default location code. <a href="#unusual">Find your own eBird Region code</a> to use these tools for your area!</p>
+        <button>Update my default region! (currently: {defaultLocation})</button>
+        <p>🔎 <a href="#region">Find your own eBird Region code</a> 🔍 to use these tools for your area!</p>
       </form>
     </div>
 
     <h2>Birding Tools</h2>
       <ul className="tools">
-        <li className="tools">🤨🦚🐧 <a href="#unusual">See rare or unusual bird observations</a></li>
-        <li className="tools">🐦🐦‍⬛🦆🪿<a href="#unusual">See all birds recently observed in an area</a></li>
+        <li className="tools">🤨🦤🦚🐧 <a href="#unusual">See rare or unusual bird observations</a></li>
+        <li className="tools">🐦🦆🪿🦅<a href="#recent">See all birds recently observed in an area</a></li>
       </ul>
  
     <h2 id="unusual"><a href="#unusual">🦤</a> Rare or Notable Birds</h2>
@@ -66,7 +66,7 @@ const App = () => {
     <h2 id="recent"><a href="#recent">🐦</a> Recent Birds</h2>
     <Recent defaultLocation={defaultLocation}/>
 
-    <h2 id="region"><a href="#region">🐦</a> Find an eBird region ID code</h2>
+    <h2 id="region"><a href="#region">🔎</a> Find an eBird region ID code</h2>
     <Regions />
  
     <details>
