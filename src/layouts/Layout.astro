@@ -26,7 +26,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-    <meta name="description" content={title}>
+        <meta name="description" content={title}>
 		<meta property="og:url" content = {canonicalURL}>
 		<meta property="og:type" content = "website">
 		<meta property="og:title" content = {title}/>
@@ -43,4 +43,5 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 		<slot />
 		<footer>Built by <a href="https://www.rainsberger.ca" class="footer-link">Sarah Rainsberger</a> with <a href="https://astro.build" class="footer-link">Astro</a> and React</footer>
 	</body>
+	<script data-goatcounter="https://sbirb.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </html>
