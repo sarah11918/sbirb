@@ -56,8 +56,8 @@ const App = () => {
 
     <h2>Birding Tools</h2>
       <ul className="tools">
-        <li className="tools">🤨🦤🦚🐧 <a href="#unusual">See rare or unusual bird observations</a></li>
-        <li className="tools">🐦🦆🪿🦅<a href="#recent">See all birds recently observed in an area</a></li>
+        <li className="tools">🤨🦤🦚🐧 <a href="#unusual">Rare or unusual bird reports</a></li>
+        <li className="tools">🐦🦆🪿🦅<a href="#recent">All birds recently observed</a></li>
       </ul>
  
     <h2 id="unusual"><a href="#unusual">🦤</a> Rare or Notable Birds</h2>

@@ -157,4 +157,6 @@ panel__inner::-webkit-scrollbar-track {
 .tools {
   list-style: none;
   padding-bottom: 1em;
+  list-style-position: outside;
+  padding-left: 0;
 }
