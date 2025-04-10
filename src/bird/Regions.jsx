@@ -175,9 +175,9 @@ export default function Regions() {
           textAlign: "justify"
         }}
       >
+        <p>Click to select a default region. Sub-regions may be available.</p>
         <RegionsList regionData={regions} />
       </div>
-
       <SubRegionsList subRegionData={subRegions} />
       <p className="more-info">
         <a href="https://ebird.org/canada/region/world/regions?yr=all&m=&hsStats_sortBy=cl&hsStats_o=desc">
