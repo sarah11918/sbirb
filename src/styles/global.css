@@ -81,6 +81,7 @@ a.experiment:hover {
 
 button {
   cursor: pointer;
+  border-radius: 7px;
 
 }
 
