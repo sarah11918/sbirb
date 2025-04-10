@@ -45,7 +45,7 @@ export default function NotableBirdList(props) {
   let birdsPendingDivs = notReviewed.map((bird) => {
     let checklistURL = `https://ebird.org/checklist/${bird.subId}`;
     let mapURL = `https://www.google.com/maps/search/?api=1&query=${bird.lat}%2C${bird.lng}`;
-
+    let birdURL = `https://ebird.org/species/${bird.speciesCode}`;
     return (
       <div
         key={bird.obsId}
@@ -53,7 +53,7 @@ export default function NotableBirdList(props) {
         style={{ color: "#3d5262" }}
       >
         <p style={{ fontSize: "1.2rem" }}>
-          {bird.comName} - {bird.howMany ? bird.howMany : `present`}
+        <a href={birdURL}>{bird.comName}</a> - {bird.howMany ? bird.howMany : `present`}
         </p>
         <p style={{ fontSize: "0.85rem" }}>
           {bird.obsDt} by {bird.userDisplayName}
@@ -72,10 +72,11 @@ export default function NotableBirdList(props) {
   let birdsVerifiedDivs = reviewedAndValid.map((bird) => {
     let checklistURL = `https://ebird.org/checklist/${bird.subId}`;
     let mapURL = `https://www.google.com/maps/search/?api=1&query=${bird.lat}%2C${bird.lng}`;
+    let birdURL = `https://ebird.org/species/${bird.speciesCode}`;
     return (
       <div key={bird.obsId} className="birdVerified">
         <p style={{ fontSize: "1.2rem" }}>
-          {bird.comName} - {bird.howMany ? bird.howMany : `present`}
+          <a href={birdURL}>{bird.comName}</a> - {bird.howMany ? bird.howMany : `present`}
         </p>
         <p style={{ fontSize: "0.85rem" }}>
           {bird.obsDt} by {bird.userDisplayName}

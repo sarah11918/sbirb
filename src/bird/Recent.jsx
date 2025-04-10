@@ -48,7 +48,10 @@ export default function Recent() {
     );
     const data = await response.json();
     setRecentBirds(data);
+
+   
   }
+  
   
 
   return (
@@ -81,7 +84,7 @@ export default function Recent() {
      
       <h3>Reported in the last 14 days...</h3>
       {recentBirds.map((bird) => (
-        <p>{bird.comName} on {bird.obsDt.toString().slice(5,10)}</p>
+        <p><a href={`https://www.ebird.org/species/${bird.speciesCode}`}>{bird.comName}</a> on {bird.obsDt.toString().slice(5,10)}</p>
       ))}
     </div>
   );
