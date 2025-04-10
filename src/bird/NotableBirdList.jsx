@@ -44,6 +44,7 @@ export default function NotableBirdList(props) {
 
   let birdsPendingDivs = notReviewed.map((bird) => {
     let checklistURL = `https://ebird.org/checklist/${bird.subId}`;
+    let mapURL = `https://www.google.com/maps/search/?api=1&query=${bird.lat}%2C${bird.lng}`;
 
     return (
       <div
@@ -60,6 +61,9 @@ export default function NotableBirdList(props) {
         <p style={{ fontSize: "0.75rem" }}>
           Checklist: <a href={checklistURL}>{bird.subId}</a>
         </p>
+        <p style={{ fontSize: "0.75rem" }}>
+          <a href={mapURL}>See map of {bird.locName}</a>
+        </p>
         <hr />
       </div>
     );
@@ -67,7 +71,7 @@ export default function NotableBirdList(props) {
 
   let birdsVerifiedDivs = reviewedAndValid.map((bird) => {
     let checklistURL = `https://ebird.org/checklist/${bird.subId}`;
-
+    let mapURL = `https://www.google.com/maps/search/?api=1&query=${bird.lat}%2C${bird.lng}`;
     return (
       <div key={bird.obsId} className="birdVerified">
         <p style={{ fontSize: "1.2rem" }}>
@@ -78,6 +82,9 @@ export default function NotableBirdList(props) {
         </p>
         <p style={{ fontSize: "0.75rem" }}>
           Checklist: <a href={checklistURL}>{bird.subId}</a>
+        </p>
+        <p style={{ fontSize: "0.75rem" }}>
+        <a href={mapURL}>See map of {bird.locName}</a>
         </p>
         <hr />
       </div>
