@@ -53,16 +53,13 @@ export default function NotableBirdList(props) {
         style={{ color: "#3d5262" }}
       >
         <p style={{ fontSize: "1.2rem" }}>
-        <a href={birdURL}>{bird.comName}</a> - {bird.howMany ? bird.howMany : `present`}
+          <a href={birdURL}>{bird.comName}</a> ({bird.howMany ? bird.howMany : `present`}) {bird.obsDt}
         </p>
         <p style={{ fontSize: "0.85rem" }}>
-          {bird.obsDt} by {bird.userDisplayName}
+          {bird.userDisplayName} at {bird.locName}
         </p>
         <p style={{ fontSize: "0.75rem" }}>
-          Checklist: <a href={checklistURL}>{bird.subId}</a>
-        </p>
-        <p style={{ fontSize: "0.75rem" }}>
-          <a href={mapURL}>See map of {bird.locName}</a>
+        <a href={mapURL}>Map</a> <a href={checklistURL}>Checklist</a>
         </p>
         <hr />
       </div>
@@ -76,16 +73,13 @@ export default function NotableBirdList(props) {
     return (
       <div key={bird.obsId} className="birdVerified">
         <p style={{ fontSize: "1.2rem" }}>
-          <a href={birdURL}>{bird.comName}</a> - {bird.howMany ? bird.howMany : `present`}
+          <a href={birdURL}>{bird.comName}</a> ({bird.howMany ? bird.howMany : `present`}) {bird.obsDt}
         </p>
         <p style={{ fontSize: "0.85rem" }}>
-          {bird.obsDt} by {bird.userDisplayName}
+          {bird.userDisplayName} at {bird.locName}
         </p>
         <p style={{ fontSize: "0.75rem" }}>
-          Checklist: <a href={checklistURL}>{bird.subId}</a>
-        </p>
-        <p style={{ fontSize: "0.75rem" }}>
-        <a href={mapURL}>See map of {bird.locName}</a>
+        <a href={mapURL}>Map</a> <a href={checklistURL}>Checklist</a>
         </p>
         <hr />
       </div>
