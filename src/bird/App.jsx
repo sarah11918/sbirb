@@ -30,15 +30,15 @@ const App = () => {
           type="text"
           placeholder="eBird region eg. CA-PE-PR"
         />
-        <button>Update my default region! ({defaultLocation})</button>
+        <button>Update my default region! (It's currently {defaultLocation})</button>
         <p>🔎 <a href="#region">Find your own eBird Region code</a> 🔍 to use these tools for your area!</p>
       </form>
     </div>
 
     <h2>Birding Tools</h2>
       <ul className="tools">
-        <li className="tools">🤨🦤🦚🐧 <a href="#unusual">Rare or unusual bird reports</a></li>
-        <li className="tools">🐦🦆🪿🦅<a href="#recent">All birds recently observed</a></li>
+        <li className="tools">🤨🦤 <a href="#unusual">Rare or unusual bird reports</a> 🦚🐧</li>
+        <li className="tools">🐦🦆 <a href="#recent">All birds recently observed</a> 🪿🦅</li>
       </ul>
  
     <h2 id="unusual"><a href="#unusual">🦤</a> Rare or Notable Birds</h2>

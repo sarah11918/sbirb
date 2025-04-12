@@ -221,6 +221,7 @@ export default function Notable() {
         />
         <button>Submit Location</button>
       </form>
+      <br />
       <h4 className="birdtab">Showing birds reported in: {location}</h4>
       <div className="image-container">
       <img src="/birdthin.png" alt=""/>
